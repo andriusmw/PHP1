@@ -1,5 +1,29 @@
+
+<?php 
+    $name = "Usuario";
+    $isDev = true;
+    $age = 39;
+
+    //+ Concatena suma pero no concatena 2 textos para eso es .
+    $newAge = 39 + '1';
+
+    //var_dump() inidica el tipo de datos y su valor
+    var_dump($name);
+    var_dump($isDev);
+    var_dump($age);
+
+     //var_dump() inidica el tipo de datos solamente
+    echo gettype($name);
+    echo gettype($isDev);
+    echo gettype($age);
+
+?>
+
+
+
+
 <h1>
-<?php echo "Mi primera App"; ?>
+<?= "Bienvenido " . $name ?>
 </h1>
 
 
