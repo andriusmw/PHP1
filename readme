@@ -1,0 +1,6 @@
+
+php -v 
+    To watch the version
+
+php -S localhost:8000
+    to run the server
