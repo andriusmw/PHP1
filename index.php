@@ -4,6 +4,10 @@
     $isDev = true;
     $age = 39;
 
+    //Crea una constante, primero indica el nombre de la constante y luego el contenido
+    define('PHP_LOGO', 'https://cdn.freebiesupply.com/logos/large/2x/php-logo-svg-vector.svg');
+    
+
     //+ Concatena suma pero no concatena 2 textos para eso es .
     $newAge = 39 + '1';
 
@@ -17,14 +21,19 @@
     echo gettype($isDev);
     echo gettype($age);
 
+       
+     $output= "Este es un tecto de prueba para $name"  
+
 ?>
 
 
 
 
-<h1>
-<?= "Bienvenido " . $name ?>
-</h1>
+<h1><?= "Bienvenido " . $name ?></h1>
+
+<h2><?= $output ?></h2>
+
+<img src="<?= PHP_LOGO ?>" alt="PHP LOGO" width="200">
 
 
 <style>
