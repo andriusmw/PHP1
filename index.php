@@ -104,6 +104,44 @@ $outputAge = match (true) {
 <h2><?= $outputAge ?></h2>
 
 
+<?php 
+//----------------------ARRAYS ----------------------------------------
+
+
+$bestLanguages = ["PHP", "JavaScript", "Python", ];
+//Se puede añadir items al array al final
+$bestLanguages[] = "Java";
+
+?>
+
+<h3>
+    <?= $bestLanguages[0] ?>
+</h3>
+
+<p>Array de lenguajes : </p>
+<ul>
+    <?php foreach($bestLanguages as $language) : ?>
+        <li><?= $language ?></li>
+    <?php endforeach; ?>    
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
