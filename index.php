@@ -127,13 +127,36 @@ $bestLanguages[] = "Java";
 
 
 
+<p>Array de lenguajes con índice: </p>
+<ul>
+    <?php foreach($bestLanguages as $key => $language) : ?>
+        <li><?=$key . " " .  $language ?></li>
+    <?php endforeach; ?>    
+</ul>
 
 
 
 
 
+<?php 
+//------------------- ARRAYs ASOCIATIVOs O DICCIONARIOS ----------------
+
+// A las índices de estos arrays se les llama keys, son lo que va
+// delante del arrow
+
+$person = [
+    "name" => "Miguel",
+    "age" => "78",
+    "isDev" => true,
+    "languages" => ["PHP", "JavaScript", "Python"],
+    ];
+
+$person["name"] = "Perico";
+//añade un elemento al array dentro del array asociativo
+$person["languages"][] = "Java";
 
 
+?>
 
 
 
