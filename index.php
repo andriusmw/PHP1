@@ -12,22 +12,27 @@ body {
 </style>
 
 <?php 
-//Recibir datos de Marvel API (GET)
+//Recibir datos de Marvel API (USANDO CURL)
 
-const API_URL = "https://whenisthenextmcufilm.com/api";
+const API_URL = "http://whenisthenextmcufilm.com/api";
 #Iniciar una nueva sesión de cURL ; = CH = CURL HANDLE
-$ch = curl_init(API_URL);
+//$ch = curl_init(API_URL);
 //Indicar que queremos recibir el resultado de la petición y no mostrarla en pantalla
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+//curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 /* Ejecutar la petición 
 y guardamos el resultado */
 
-$result = curl_exec($ch);
-$data = json_decode($result, true); //Guarda el resultado en un array asociativo
+//$result = curl_exec($ch);
 
-curl_close($ch); /*cierrra conexión de curl */
+//-----------------alternativa ---------------------
+//Usando GET
 
-var_dump($data) /*para ver qué tiene la data */
+$result = file_get_contents(API_URL);
+var_dump($result);
+
+//$data = json_decode($result, true); //Guarda el resultado en un array asociativo
+//curl_close($ch); /*cierrra conexión de curl */
+//var_dump($data); /*para ver qué tiene la data */
 
 ?>
 
@@ -43,6 +48,8 @@ var_dump($data) /*para ver qué tiene la data */
 
 <main>
     <h2>La próxima película de Marvel</h2>
+    <img src="<?= $result["poster_url"]; ?>" />
+    <h2><?= $result["title"]; ?> </h2>
 </main>
 
 
