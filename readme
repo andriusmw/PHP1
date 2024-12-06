@@ -4,3 +4,17 @@ php -v
 
 php -S localhost:8000
     to run the server
+
+*Estos resultados son solo a nivel teórico, pues por falta
+de posbilidad de configurar el servidor PHP no se han podido
+comprobar que reciba los datos de la api, aunque se ha copiado
+la url en el navegador, se ha visto que hay un json y su estructura
+y por tanto los nombres de los objetos y cómo acceder a ellos. 
+
+El problema que hemos encontrado es que al instalar PHP en windows,
+no se han instalado el certificado de conexión SSL ni la extensión CURL
+y a pesar de sobreescribir el archivo php.ini para incluirlo, no le da 
+la real gana de funcionar, de modo que como esto era solo de prueba
+puesto que luego se trabajará con otros servidores PHP, ya creados
+y este es mi ordenador personal, pues así se queda. Osea, en un servidor
+esto debe de funcionar. 
